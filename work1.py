@@ -89,11 +89,25 @@ while spisok:
     spisok.pop()
     print(spisok)
 # ** Дана последовательность натуральных ненулевых чисел, завершающаяся числом 0.
-print('Определите, какое наибольшее число подряд идущих элементов этой последовательности равны друг другу.')
-spisok=[1,1,3,4,5,5,5,9,0]
-k=0
-e=1
-kol=[0,0,0,0,0,0,0,0]
+print('Определите, какое наибольшее число подряд идущих элементов этой последовательности равны друг другу.\n \n')
+spisok=[1,1,3,4,4,4,5,9,0,]
+kol=0
+max1=1
+o1=len(spisok)
+f=o1-1
+print(spisok)
+for jj in range(f):
+    kol=0
+    for o in range(f):
+        if spisok[jj]==spisok[o+1]:
+            kol+=1
+    if max1<kol:
+        max1=kol
+        elem=spisok[jj]
+
+print('число ',str(elem), 'подряд ', str(max1),'\n')
+
+
 
 
 #
@@ -157,14 +171,14 @@ if slovo !='':
 spisok_slov.sort()
 
 print(spisok_slov)
-keys = range(len(spisok_slov))
+
 
 di = {}
 i=1
 for x in spisok_slov:
    di[x] = spisok_slov.count(x)
 
-print(di)
+print('',di)
 
 
 
