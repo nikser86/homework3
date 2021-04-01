@@ -60,7 +60,7 @@ while chislo%2==0:
     chislo = chislo/2
     print(str(chislo))
 print(str(kol))
-#
+
 #
 # Задание 4
 #
