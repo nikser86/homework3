@@ -60,7 +60,7 @@ while chislo%2==0:
     chislo = chislo/2
     print(str(chislo))
 print(str(kol))
-
+#
 #
 # Задание 4
 #
@@ -90,7 +90,7 @@ while spisok:
     print(spisok)
 # ** Дана последовательность натуральных ненулевых чисел, завершающаяся числом 0.
 print('Определите, какое наибольшее число подряд идущих элементов этой последовательности равны друг другу.\n \n')
-spisok=[1,1,3,4,4,4,5,9,0,]
+spisok=[1,1,3,4,4,4,5,4,4,9,0,]
 kol=0
 max1=1
 o1=len(spisok)
@@ -101,11 +101,14 @@ for jj in range(f):
     for o in range(f):
         if spisok[jj]==spisok[o+1]:
             kol+=1
-    if max1<kol:
-        max1=kol
-        elem=spisok[jj]
+            if max1 < kol:
+                max1 = kol
+                elem = spisok[jj]
+        else:
+            kol = 0
 
-print('число ',str(elem), 'подряд ', str(max1),'\n')
+
+print('число ',str(elem), 'подряд ', str(max1), 'раза    !исправил!','\n')
 
 
 
